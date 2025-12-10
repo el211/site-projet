@@ -13,6 +13,7 @@ Table des matières
 - Structure du projet
 - Lancer en local
 - Déploiement
+- Hébergement (actuel)
 - Notes de développement & sécurité
 - Contribuer
 - Licence
@@ -119,6 +120,15 @@ Déploiement
 - Déploiement du serveur Node :
   - Le fichier `index.js` est adapté pour des tests rapides et peut tourner sur des services Node (Fly, Render, Railway, etc.). Pour une mise en production réelle, l’hébergement statique reste recommandé.
 
+Hébergement (actuel)
+--------------------
+- Hébergement actuel : le site est hébergé sur un serveur dédié.
+- Accès public : vous pouvez accéder au site à l'adresse suivante :
+  - https://portfolio.eliassaire.fr
+- Remarques :
+  - Si vous utilisez un domaine pointant vers votre serveur (comme ci‑dessus), assurez-vous que les certificats TLS/HTTPS sont en place (Let's Encrypt recommandé).
+  - Le serveur Node inclus (index.js) est utile pour des tests locaux, mais en production vous pouvez servir les fichiers statiques via Nginx/Apache (reverse-proxy) ou un service d'hébergement statique si vous préférez ne pas exécuter Node en continu sur la machine.
+
 Notes importantes & sécurité
 --------------------------------------------
 - Leçons et fonctions de validation :
@@ -153,4 +163,5 @@ Je peux ensuite, selon votre choix :
 - Convertir les chemins absolus `/` en chemins relatifs pour une compatibilité GitHub Pages (ou fournir un script de build).
 
 Dites-moi quelle action vous voulez que je fasse ensuite.
+```
 ```
