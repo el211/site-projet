@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprender Java Terminal Interactivo · Oreo Studios</title>
+  <meta name="description" content="Una forma interactiva y divertida de aprender los conceptos básicos de Java utilizando un entorno de línea de comandos simulado y desafíos de juego." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/learn.css" /> 
+</head>
+<body>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <span>Oreo Studios · Aprender Java</span>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="/es/index.html#services">← Volver al portfolio</a></li>
+          <li><a href="/es/learn-java.html" class="active">Aprender Java</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <a href="/es/index.html#contact" class="nav-cta">
+        <span>Empezar Proyecto</span>
+      </a>
+      <button class="nav-burger" aria-label="Cambiar navegación">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+<main>
+    <section id="learn-java">
+      <div class="container reveal">
+        <h1 class="section-title">🎓 Aprender Java con el Terminal Oreo</h1>
+        <p class="section-subtitle">
+          Resuelve desafíos de código directamente en la simulación del terminal. Escribe tu código y pulsa **[Ejecutar]** para depurar tus habilidades!
+        </p>
+
+        <div id="java-terminal" class="terminal-card">
+          <div class="terminal-header">
+            <span class="terminal-title" id="terminal-title">OreoOS > Estado: Cargando lección...</span> 
+            <div class="terminal-controls">
+              <span class="terminal-score" id="score">Puntuación: 0 / 100</span>
+            </div>
+          </div>
+          
+          <div class="terminal-output" id="output">
+            <p>Cargando lecciones interactivas de Java...</p>
+          </div>
+          
+          <div class="terminal-input-area">
+            <span class="terminal-prompt">public static void main(String[] args) {</span>
+            <textarea id="code-input" class="code-editor" rows="2" placeholder="System.out.println(...);"></textarea>
+            <div class="terminal-actions">
+              <button id="run-btn" class="btn btn-primary btn-sm">▶ Ejecutar Código</button>
+              
+              <button id="hint-btn" class="btn btn-secondary btn-sm">❓ Pista</button> 
+              
+              <button id="reset-btn" class="btn btn-secondary btn-sm">↻ Reiniciar</button>
+            </div>
+          </div>
+
+          <div id="feedback" class="terminal-feedback"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container footer-row">
+      <div>Oreo Studios · Elias — © 2025. Todos los derechos reservados.</div>
+      <div class="footer-links">
+        <a href="/es/index.html#hero">Volver arriba</a>
+        <span>·</span>
+        <span>Hecho con puro HTML/CSS/JS, sin frameworks.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/sound.js" defer></script>
+  <script src="/js/learn-java.js" defer></script>
+</body>
+</html>

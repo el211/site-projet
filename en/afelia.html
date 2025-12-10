@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afelia – Sci-fi FPS/RPG · Oreo Studios</title>
+  <meta name="description" content="AFELIA is a sci-fi FPS/RPG centered on Afelium, an unstable energy source, rival factions, and augmented operators on the front line." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <span>Oreo Studios · Afelia</span>
+      </div>
+
+      <nav aria-label="Afelia navigation">
+        <ul class="nav-links">
+          <li><a href="/en/index.html#services">← Back to portfolio</a></li>
+          <li><a href="#section-jeu" class="active">The game</a></li>
+          <li><a href="#section-factions">Factions</a></li>
+          <li><a href="#section-combat">Combat</a></li>
+          <li><a href="#section-briefing">Lore briefing</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <a href="/en/index.html#contact" class="nav-cta">
+        <span>Contact</span>
+      </a>
+      <button class="nav-burger" aria-label="Toggle navigation">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="section-jeu">
+      <div class="container grid-hero reveal">
+        <div>
+          <div class="badge">
+            <span>AFELIA</span>
+            <span>PRE-ALPHA BUILD</span>
+          </div>
+          <h1 class="hero-title">
+            WARNING // <span>AFELIUM BREACH DETECTED</span>
+          </h1>
+          <p class="hero-tagline">
+            AFELIA is a high-velocity sci-fi FPS/RPG, centered on Afelium, an illegal energy source that warps matter... and those who use it.
+          </p>
+          <p class="hero-desc">
+            As an Operator, you rip armor off living targets, bend gravity with nerve implants, and choose which faction gets
+            the last world worth fighting — and dying — for.
+          </p>
+
+          <div class="btn-row">
+            <a href="#section-briefing" class="btn btn-primary">
+              <span>Read lore briefing</span>
+            </a>
+            <a href="#section-combat" class="btn btn-secondary">
+              <span>See combat pillars</span>
+            </a>
+          </div>
+
+          <p class="afelia-platforms">
+            Planned platforms: <strong>PC</strong>, <strong>PlayStation</strong>, <strong>Xbox</strong> · In-engine captures, pre-alpha build.
+          </p>
+        </div>
+
+        <aside class="card" data-code-screen="afelia">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">AfeliumImplant.java</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Snippets for the AFELIA prototype: implants, operators, server-side gameplay logic.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="section-factions">
+      <div class="container reveal">
+        <h2 class="section-title">Factions & loyalties</h2>
+        <p class="section-subtitle">
+          Every power wants Afelium. None want peace. You choose who you help, who you betray — and who gets the last usable energy source.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-subtitle">Opale Synarchy · The Theocrats</h3>
+            <ul class="list-dot">
+              <li>They consider Afelium a “sacred light”.</li>
+              <li>Implants are “blessed” then welded to the bones of the faithful.</li>
+              <li>Public executions renamed to “purifications”.</li>
+              <li>Armor is <em>grown</em> rather than forged, using living crystals.</li>
+            </ul>
+
+            <h3 class="card-subtitle" style="margin-top:1.2rem;">Heliar Wanderers · The Nomads</h3>
+            <ul class="list-dot">
+              <li>Drifters, smugglers, deserters, freelance pilots.</li>
+              <li>Recycle military gear and black market mods.</li>
+              <li>Flexible allegiance: to the highest bidder... or the fairest one.</li>
+              <li>Their unofficial motto: “Freedom is paid in blood.”</li>
+            </ul>
+
+            <h3 class="card-subtitle" style="margin-top:1.2rem;">[ REDACTED ] · Classified File</h3>
+            <ul class="list-dot">
+              <li>AI-generated militia, bodies that never "officially" existed.</li>
+              <li>Total absence of biological ID in scans.</li>
+              <li>Non-human ballistic spread, impossible trajectories.</li>
+              <li>Sighted only during "blackout" events.</li>
+            </ul>
+          </div>
+
+          <div id="section-combat" class="card">
+            <h3 class="card-subtitle">Combat Pillars</h3>
+            <ul class="list-dot">
+              <li><strong>Aggression is safety</strong> — air-control, dash, wall bursts, grappling hooks on debris: if you stop, you're already dead.</li>
+              <li><strong>Implant Violence</strong> — overcharge your nervous system to slow time, rip armor off targets, or project shockwaves at point-blank range.</li>
+              <li><strong>Map-changing decisions</strong> — who receives the Afelium decides which districts stabilize... or collapse.</li>
+              <li><strong>Betrayable coop</strong> — execute contracts with allies, then sell them out to a rival faction halfway through the operation.</li>
+            </ul>
+
+            <div class="tag-ligne">
+              <span class="tag">Sci-fi FPS</span>
+              <span class="tag">RPG systems</span>
+              <span class="tag">Dynamic factions</span>
+              <span class="tag">Coop & betrayal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-briefing">
+      <div class="container reveal">
+        <h2 class="section-title">Lore Briefing · Condensed</h2>
+        <p class="section-subtitle">
+          The Arcanis, Afelium, the Great Fall, the Black Monolith... and your place as the Chosen One.
+        </p>
+
+        <div class="card briefing-texte">
+          <p>
+            It is said that several millennia ago, an extremely advanced civilization dominated the galaxy: <strong>the Arcanis</strong>.
+            They discovered a living, conscious energy: <strong>Afelium</strong>. Thanks to it, they erected floating cities,
+            immortal machines, and stargates connecting entire worlds.
+          </p>
+
+          <p>
+            Obsessed with absolute control, they tried to force Afelium to obey. The energy reacted. This was
+            <strong>the Great Fall</strong>: pulverized planets, collapsed continents, cracked cities. The Arcanis almost disappeared,
+            leaving behind only ruins and fragments of Afelium, still saturated with uncontrollable power.
+          </p>
+
+          <p>
+            Centuries later, unified humanity rediscovers a crystal vibrant with blue light: the first fragment of Afelium found.
+            The ruins open, machines reactivate. But the energy only responds to certain rare individuals capable of synchronizing with it:
+            <strong>the Chosen Ones</strong>.
+          </p>
+
+          <p>
+            Around them are born three visions of the future: the <strong>Opale Synarchy</strong>, which wants to rationalize and sanctify the light;
+            the <strong>Chorus of Ashes</strong>, which sees Afelium as a living spirit to be worshipped, even if the world must burn to be reborn;
+            the <strong>Heliar Wanderers</strong>, who reject empires and cults, and protect civilians as long as there is something left to save.
+          </p>
+
+          <p>
+            At the center of everything: <strong>Ophalen</strong>, a dead planet, and the <strong>Black Monolith</strong>, an indestructible Arcanis artifact that pulses
+            like a sleeping heart. Some explorers claim it whispers, shows visions... and that behind the Afelium, a consciousness is awakening.
+          </p>
+
+          <p>
+            As a Chosen One, touching a fragment projects you into memories of a dead civilization. You see collapsed cities, hear voices,
+            perceive Echoes of ancient spirits. The further you advance, the more you understand that the Arcanis may not have died: they
+            <strong>transferred themselves into the Afelium</strong> itself.
+          </p>
+
+          <p>
+            Some of these Echoes want to be reborn by using the Chosen Ones as vessels. The Black Monolith no longer sleeps. With every mission,
+            you decide if you save the universe from a second Great Fall... or if you repeat exactly the same mistake as them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2 reveal">
+        <div class="card">
+          <h3 class="card-subtitle">Early Access List (Mockup)</h3>
+          <p class="card-note">
+            Form mockup: on the technical side, you could later connect this to a backend, a Mailchimp list, etc.
+          </p>
+          <form class="form-early" onsubmit="event.preventDefault(); alert('Mockup only for now ✨');">
+            <input
+              type="email"
+              required
+              placeholder="your@email"
+            />
+            <button class="btn btn-primary" type="submit">Join the list</button>
+          </form>
+          <p class="note-form">
+            You will receive news about AFELIA (in the real version). You can unsubscribe at any time.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-subtitle">Community & Wishlist</h3>
+          <ul class="list-dot">
+            <li><strong>Discord</strong> — talk directly with the team, vote on features, suggest mission ideas.</li>
+            <li><strong>Wishlist</strong> — when you add the game on Steam/console, platforms take the project more seriously.</li>
+            <li><strong>Playtests</strong> — closed sessions to test mobility, gunfeel, implants, and faction balancing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>AFELIA · Oreo Studios — © 2025. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/en/index.html">Portfolio / Oreo Studios</a>
+        <span>·</span>
+        <span>Pre-alpha, content subject to change.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/code-animations.js" defer></script>
+</body>
+</html>

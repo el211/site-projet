@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oreo Studios · Développeur Java & Plugins Minecraft Portfolio</title>
+  <meta name="description" content="Portfolio d'Elias · Développeur Java & web, créateur d'OreoEssentials, ModeledNPCs et de l'univers sci-fi FPS/RPG Afelia." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <canvas id="code-rain"></canvas>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <div class="logo-text-block">
+          <span class="logo-text-main">OREO STUDIOS · ELIAS</span>
+          <span id="logoCode" class="logo-code"></span>
+        </div>
+      </div>
+
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/fr/index.html#hero" class="active">Aperçu</a></li>
+          <li><a href="/fr/index.html#services">Projets</a></li>
+          <li><a href="/fr/index.html#stack">Tech</a></li>
+          <li><a href="/fr/learn-java.html">Apprendre Java</a></li>
+          <li><a href="/fr/index.html#mini-game">Mini-jeu</a></li>
+          <li><a href="/fr/index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="lang-switch">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+
+        <a href="/fr/index.html#contact" class="nav-cta">
+          <span>Lancer Votre Projet</span>
+        </a>
+      </div>
+      <button class="nav-burger" aria-label="Toggle navigation">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="container grid-hero reveal">
+        <div>
+          <div class="badge">
+            <span>👋 Elias</span>
+            <span>Java · Minecraft · Web</span>
+          </div>
+          <h1 class="hero-title">
+            Je crée <span>des outils de niveau développeur</span> pour Minecraft et au-delà.
+          </h1>
+          <p class="hero-tagline">
+            Je conçois et livre des plugins, systèmes et outils comme de vrais produits — testés, documentés et prêts pour les réseaux de production.
+          </p>
+          <p class="hero-desc">
+            De <strong>OreoEssentials</strong> (core Essentials tout-en-un) à <strong>ModeledNPCs</strong> et l’univers sci-fi <strong>AFELIA</strong>, j’adore mélanger architecture backend propre et game design fun.
+          </p>
+
+          <div class="hero-badges">
+            <span class="hero-badge">Java 17+ · Kotlin</span>
+            <span class="hero-badge">Paper / Velocity</span>
+            <span class="hero-badge">MongoDB · PostgreSQL · Redis · RabbitMQ</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="/fr/index.html#services" class="btn btn-primary">
+              <span>Explorer les projets</span>
+            </a>
+            <a href="/fr/index.html#contact" class="btn btn-secondary">
+              <span>Parlons de ton serveur</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="card" data-code-screen="default">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">/src/main/java/OreoStudios</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Live Java code preview · extraits de systèmes réels : DB asynchrone, records, events, sync multi-serveurs.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container reveal">
+        <h2 class="section-title">Projets sélectionnés</h2>
+        <p class="section-subtitle">
+          Un aperçu rapide de certains systèmes que j’ai construits — des remplacements complets d’Essentials jusqu’aux univers sci-fi.
+        </p>
+
+        <div class="services-grid">
+          <a href="/fr/oreoessentials.html" class="service-card">
+            <h3 class="service-title">OreoEssentials</h3>
+            <p class="service-subtitle">
+              Plugin Essentials tout-en-un avec sync multi-serveurs, MongoDB/PostgreSQL, Redis et RabbitMQ.
+            </p>
+            <ul class="service-list">
+              <li>Homes, warps, spawn, RTP, chat, économie, modération…</li>
+              <li>Couche de données asynchrone avec base + cache.</li>
+              <li>Interfaces SmartInvs & configs modulaires.</li>
+            </ul>
+            <span class="service-tag">Voir le projet →</span>
+          </a>
+
+          <a href="/fr/arcade.html" class="service-card">
+            <h3 class="service-title">Developer Arcade</h3>
+            <p class="service-subtitle">
+              Un mini-arcade JS avec quelques jeux sur le thème du debug et de Java.
+            </p>
+            <ul class="service-list">
+              <li>Mini-jeux basés sur Canvas.</li>
+              <li>JS propre et modulable par jeu.</li>
+              <li>Esthétique pixel & terminal.</li>
+            </ul>
+            <span class="service-tag">Jouer dans le navigateur →</span>
+          </a>
+
+          <a href="/fr/afelia.html" class="service-card">
+            <h3 class="service-title">AFELIA · FPS/RPG sci-fi</h3>
+            <p class="service-subtitle">
+              Univers sci-fi original autour de l’Afelium, des factions, opérateurs et combats systémiques.
+            </p>
+            <ul class="service-list">
+              <li>Lore complet & worldbuilding.</li>
+              <li>Piliers de combat & design des opérateurs.</li>
+              <li>Campagne + structure coopérative.</li>
+            </ul>
+            <span class="service-tag">Découvrir l’univers →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="container grid-2 reveal">
+        <div>
+          <h2 class="section-title">Tech & stack</h2>
+          <p class="section-subtitle">
+            J’aime quand un serveur ressemble à un vrai produit : monitoré, scalable et maintenable. Ça veut dire choisir une tech éprouvée — et bien l’utiliser.
+          </p>
+
+          <ul class="list-dot">
+            <li><strong>Java 17+</strong>, Kotlin, Gradle/Maven, tests unitaires, CI.</li>
+            <li><strong>Paper, Velocity, BungeeCord</strong> · écosystèmes de plugins pour Minecraft.</li>
+            <li><strong>MongoDB, PostgreSQL, JSON</strong> · pour le stockage, avec chemins de migration.</li>
+            <li><strong>Redis & RabbitMQ</strong> · cache et messages multi-serveurs.</li>
+            <li><strong>SmartInvs, ModelEngine, MythicMobs, WorldGuard</strong> intégration.</li>
+          </ul>
+        </div>
+
+        <div class="card" data-code-screen="oreo">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">OreoEssentialsNetwork.java</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Ce panneau fait défiler des extraits réseau : records, opérations asynchrones et événements multi-serveurs.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-subtitle">Apprendre Java (Terminal)</h3>
+          <p class="section-subtitle">
+            Lance l'environnement de terminal interactif pour apprendre la syntaxe Java de base avec 100 défis chronométrés et astuces.
+          </p>
+          <a href="/fr/learn-java.html" class="btn btn-primary">
+            <span>Démarrer l'apprentissage →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mini-game">
+      <div class="container reveal">
+        <h2 class="section-title">Mini-jeu · Bug Hunter (Java)</h2>
+        <p class="section-subtitle">
+          Élimine un maximum de bugs type <strong>NullPointerException</strong> en 30 secondes. Clique sur les exceptions rouges avant qu’elles ne disparaissent.
+        </p>
+
+        <div class="mini-game-card">
+          <div class="mini-game-hud">
+            <span>
+              <span>Score :</span>
+              <strong class="value" id="miniGameScore">0</strong>
+            </span>
+            <span>
+              <span>Temps :</span>
+              <strong class="value" id="miniGameTime">30</strong>s
+            </span>
+            <button id="miniGameStart" class="btn btn-primary btn-sm" type="button">
+              Lancer la partie
+            </button>
+          </div>
+
+          <div id="miniGameGrid" class="mini-game-grid"></div>
+
+          <p id="miniGameStatus" class="mini-game-tip">
+            Clique sur les <span style="color:#fecaca;">exceptions rouges</span> pour les corriger. Manquer trop de bugs terminera la partie plus tôt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container grid-2 reveal">
+        <div>
+          <h2 class="section-title">Construisons quelque chose</h2>
+          <p class="section-subtitle">
+            Plugin développé from scratch, refonte d’une config existante ou design d’une stack réseau complète — explique-moi ce que tu veux livrer et je t’aide à le cadrer.
+          </p>
+          <ul class="list-dot">
+            <li>Plugins et systèmes sur mesure (Paper / Velocity).</li>
+            <li>Essentials multi-serveurs, sync joueurs, systèmes banque / jobs / RPG.</li>
+            <li>Conseil en architecture & performance.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <p class="contact-helper">
+            Contact rapide (statique pour l’instant) : copie/colle ceci sur Discord ou par mail avec une petite description.
+          </p>
+          <div class="contact-box">
+            <p>
+              <strong>Discord :</strong>
+              <span>@OreoStudios</span>
+            </p>
+            <p>
+              <strong>E-mail :</strong>
+              <span>
+                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="512230382334343d38302211363c30383d7f323e3c">[email&nbsp;protected]</a>
+              </span>
+            </p>
+            <p class="contact-questions">Précise :</p>
+            <ul class="list-dot contact-list">
+              <li>Ce que tu veux construire / réparer.</li>
+              <li>La version de ton serveur / ton hébergeur.</li>
+              <li>Ton budget approximatif & le timing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>Oreo Studios · Elias — © 2025. Tous droits réservés.</div>
+      <div class="footer-links">
+        <a href="/fr/index.html#hero">Retour en haut</a>
+        <span>·</span>
+        <span>Développé en pur HTML/CSS/JS, sans framework.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="/fr/index.html#contact" class="floating-cta">
+    <span>✨ Lancer un projet</span>
+  </a>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/code-animations.js" defer></script>
+  <script>
+    (function () {
+      function c() {
+        var b = a.contentDocument || a.contentWindow.document;
+        if (b) {
+          var d = b.createElement('script');
+          d.innerHTML = "window.__CF$cv$params={r:'9ab7b8f099111d84',t:'MTc2NTMxNzA3MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+          b.getElementsByTagName('head')[0].appendChild(d);
+        }
+      }
+      if (document.body) {
+        var a = document.createElement('iframe');
+        a.height = 1;
+        a.width = 1;
+        a.style.position = 'absolute';
+        a.style.top = 0;
+        a.style.left = 0;
+        a.style.border = 'none';
+        a.style.visibility = 'hidden';
+        document.body.appendChild(a);
+        if ('loading' !== document.readyState) c();
+        else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+        else {
+          var e = document.onreadystatechange || function () { };
+          document.onreadystatechange = function (b) {
+            e(b);
+            'loading' !== document.readyState && (document.onreadystatechange = e, c());
+          };
+        }
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      function c() {
+        var b = a.contentDocument || a.contentWindow.document;
+        if (b) {
+          var d = b.createElement('script');
+          d.innerHTML = "window.__CF$cv$params={r:'9ab7b9264c185d8a',t:'MTc2NTMxNzA4NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+          b.getElementsByTagName('head')[0].appendChild(d);
+        }
+      }
+      if (document.body) {
+        var a = document.createElement('iframe');
+        a.height = 1;
+        a.width = 1;
+        a.style.position = 'absolute';
+        a.style.top = 0;
+        a.style.left = 0;
+        a.style.border = 'none';
+        a.style.visibility = 'hidden';
+        document.body.appendChild(a);
+        if ('loading' !== document.readyState) c();
+        else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+        else {
+          var e = document.onreadystatechange || function () { };
+          document.onreadystatechange = function (b) {
+            e(b);
+            'loading' !== document.readyState && (document.onreadystatechange = e, c());
+          };
+        }
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      function c() {
+        var b = a.contentDocument || a.contentWindow.document;
+        if (b) {
+          var d = b.createElement('script');
+          d.innerHTML = "window.__CF$cv$params={r:'9ab7bca9def2d3a2',t:'MTc2NTMxNzIyMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+          b.getElementsByTagName('head')[0].appendChild(d);
+        }
+      }
+      if (document.body) {
+        var a = document.createElement('iframe');
+        a.height = 1;
+        a.width = 1;
+        a.style.position = 'absolute';
+        a.style.top = 0;
+        a.style.left = 0;
+        a.style.border = 'none';
+        a.style.visibility = 'hidden';
+        document.body.appendChild(a);
+        if ('loading' !== document.readyState) c();
+        else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+        else {
+          var e = document.onreadystatechange || function () { };
+          document.onreadystatechange = function (b) {
+            e(b);
+            'loading' !== document.readyState && (document.onreadystatechange = e, c());
+          };
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

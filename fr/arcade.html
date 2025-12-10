@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Developer Arcade | Oreo Studios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/arcade.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="code-rain"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <span>Oreo Studios · Developer Arcade</span>
+      </div>
+      <nav aria-label="Navigation Arcade">
+        <ul class="nav-links">
+          <li>
+            <a href="/fr/index.html#services">← Retour au portfolio</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <button class="nav-burger" aria-label="Toggle navigation">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="arcade-container reveal">
+      <div class="arcade-header">
+        <div class="led"></div>
+        <h1>DEVELOPER ARCADE</h1>
+      </div>
+
+      <p class="arcade-sub">Choisissez un jeu ci-dessous. Tous codés en pur JavaScript.</p>
+
+      <div class="game-buttons">
+        <button data-game="hacking">💻 Terminal de Hacking</button>
+        <button data-game="dodge">🐞 Esquiver les Bugs</button>
+        <button data-game="invaders">👾 Invaders Java</button>
+        <button data-game="jump">🟦 Saut Pixel</button>
+        <button data-game="random">🎲 Jeu Aléatoire</button>
+      </div>
+
+      <canvas id="gameCanvas"></canvas>
+      <div id="gameOverlay"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>Developer Arcade · Oreo Studios — © 2025.</div>
+      <div class="footer-links">
+        <span>Jeux JS simples, sans librairies.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/arcade.js" defer></script>
+  <script src="/js/games/hacking.js" defer></script>
+  <script src="/js/games/dodge.js" defer></script>
+  <script src="/js/games/invaders.js" defer></script>
+  <script src="/js/games/jump.js" defer></script>
+  <script src="/js/games/random.js" defer></script>
+</body>
+</html>

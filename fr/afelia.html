@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afelia – FPS/RPG de science-fiction · Oreo Studios</title>
+  <meta name="description" content="AFELIA est un FPS/RPG de science-fiction centré sur l’Afelium, une énergie instable, des factions rivales et des opérateurs augmentés en première ligne." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <span>Oreo Studios · Afelia</span>
+      </div>
+
+      <nav aria-label="Navigation Afelia">
+        <ul class="nav-links">
+          <li><a href="/fr/index.html#services">← Retour au portfolio</a></li>
+          <li><a href="#section-jeu" class="active">Le jeu</a></li>
+          <li><a href="#section-factions">Factions</a></li>
+          <li><a href="#section-combat">Combat</a></li>
+          <li><a href="#section-briefing">Briefing lore</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <a href="/fr/index.html#contact" class="nav-cta">
+        <span>Contact</span>
+      </a>
+      <button class="nav-burger" aria-label="Toggle navigation">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="section-jeu">
+      <div class="container grid-hero reveal">
+        <div>
+          <div class="badge">
+            <span>AFELIA</span>
+            <span>BUILD PRÉ-ALPHA</span>
+          </div>
+          <h1 class="hero-title">
+            ATTENTION // <span>BRÈCHE AFELIUM DÉTECTÉE</span>
+          </h1>
+          <p class="hero-tagline">
+            AFELIA est un FPS/RPG de science-fiction à haute vélocité, centré sur l’Afelium, une énergie illégale qui déforme la matière… et ceux qui l’utilisent.
+          </p>
+          <p class="hero-desc">
+            En tant qu’Opérateur, tu arraches l’armure de cibles vivantes, plies la gravité avec des implants nerveux et choisis quelle faction obtient
+            le dernier monde qui mérite qu’on se batte — et qu’on meure — pour lui.
+          </p>
+
+          <div class="btn-row">
+            <a href="#section-briefing" class="btn btn-primary">
+              <span>Lire le briefing lore</span>
+            </a>
+            <a href="#section-combat" class="btn btn-secondary">
+              <span>Voir les piliers du combat</span>
+            </a>
+          </div>
+
+          <p class="afelia-platforms">
+            Plateformes prévues : <strong>PC</strong>, <strong>PlayStation</strong>, <strong>Xbox</strong> · Captures in-engine, build pré-alpha.
+          </p>
+        </div>
+
+        <aside class="card" data-code-screen="afelia">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">AfeliumImplant.java</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Snippets pour le prototype AFELIA : implants, opérateurs, logique de gameplay côté serveur.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="section-factions">
+      <div class="container reveal">
+        <h2 class="section-title">Factions & loyautés</h2>
+        <p class="section-subtitle">
+          Chaque puissance veut l’Afelium. Aucune ne veut la paix. Tu choisis qui tu aides, qui tu trahis — et qui récupère la dernière source d’énergie encore exploitable.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-subtitle">Synarchie d’Opale · Les Théocrates</h3>
+            <ul class="list-dot">
+              <li>Considèrent l’Afelium comme une « lumière sacrée ».</li>
+              <li>Implants « bénis » puis soudés à l’os des fidèles.</li>
+              <li>Exécutions publiques renommées en « purifications ».</li>
+              <li>Armures <em>cultivées</em> plutôt que forgées, cristaux vivants.</li>
+            </ul>
+
+            <h3 class="card-subtitle" style="margin-top:1.2rem;">Errants d’Héliar · Les Nomades</h3>
+            <ul class="list-dot">
+              <li>Drifters, contrebandiers, déserteurs, pilotes libres.</li>
+              <li>Recycle du matériel militaire et mods de marché noir.</li>
+              <li>Allégeance flexible : au plus offrant… ou au plus juste.</li>
+              <li>Leur devise officieuse : « La liberté se paye en sang. »</li>
+            </ul>
+
+            <h3 class="card-subtitle" style="margin-top:1.2rem;">[ REDACTED ] · Dossier classifié</h3>
+            <ul class="list-dot">
+              <li>Milice générée par IA, corps qui n’ont jamais « officiellement » existé.</li>
+              <li>Absence totale d’ID biologique dans les scans.</li>
+              <li>Spread balistique non humain, trajectoires impossibles.</li>
+              <li>Aperçus uniquement pendant les événements de « blackout ».</li>
+            </ul>
+          </div>
+
+          <div id="section-combat" class="card">
+            <h3 class="card-subtitle">Piliers de combat</h3>
+            <ul class="list-dot">
+              <li><strong>Aggression is safety</strong> — air-control, dash, wall bursts, grappins sur débris : si tu t’arrêtes, tu es déjà mort.</li>
+              <li><strong>Implant Violence</strong> — surcharge ton système nerveux pour ralentir le temps, arracher l’armure des cibles ou projeter des ondes de choc à bout portant.</li>
+              <li><strong>Décisions qui marquent la carte</strong> — qui reçoit l’Afelium décide quels districts se stabilisent… ou s’effondrent.</li>
+              <li><strong>Coop trahissable</strong> — exécute les contrats avec des alliés, puis vends-les à une faction rivale en plein milieu de l’opération.</li>
+            </ul>
+
+            <div class="tag-ligne">
+              <span class="tag">FPS Sci-fi</span>
+              <span class="tag">Systèmes RPG</span>
+              <span class="tag">Factions dynamiques</span>
+              <span class="tag">Coop & trahison</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-briefing">
+      <div class="container reveal">
+        <h2 class="section-title">Briefing lore · Condensé</h2>
+        <p class="section-subtitle">
+          Les Arcanis, l’Afelium, la Grande Chute, le Monolithe Noir… et ta place en tant qu’Élu.
+        </p>
+
+        <div class="card briefing-texte">
+          <p>
+            On raconte qu’il y a plusieurs millénaires, une civilisation extrêmement avancée dominait la galaxie : <strong>les Arcanis</strong>.
+            Ils avaient découvert une énergie vivante, consciente : <strong>l’Afelium</strong>. Grâce à elle, ils érigèrent des cités flottantes,
+            des machines immortelles et des portes stellaires reliant des mondes entiers.
+          </p>
+
+          <p>
+            Obsédés par le contrôle absolu, ils tentèrent de forcer l’Afelium à obéir. L’énergie réagit. Ce fut
+            <strong>la Grande Chute</strong> : planètes pulvérisées, continents effondrés, cités fissurées. Les Arcanis disparurent presque,
+            ne laissant que des ruines et des fragments d’Afelium, encore saturés de puissance incontrôlable.
+          </p>
+
+          <p>
+            Des siècles plus tard, l’humanité unifiée redécouvre un cristal vibrant d’une lumière bleue : le premier fragment d’Afelium retrouvé.
+            Les ruines s’ouvrent, des machines se réactivent. Mais l’énergie ne répond qu’à certains individus rares, capables de se synchroniser avec elle :
+            <strong>les Élus</strong>.
+          </p>
+
+          <p>
+            Autour d’eux naissent trois visions de l’avenir : la <strong>Synarchie d’Opale</strong>, qui veut rationaliser et sanctifier la lumière ;
+            le <strong>Chœur des Cendres</strong>, qui voit en l’Afelium un esprit vivant à vénérer, même si le monde doit brûler pour renaître ;
+            les <strong>Errants d’Héliar</strong>, qui refusent empires et cultes, et protègent les civils tant qu’il reste quelque chose à sauver.
+          </p>
+
+          <p>
+            Au centre de tout : <strong>Ophalen</strong>, planète morte, et le <strong>Monolithe Noir</strong>, artefact Arcanis indestructible qui pulse
+            comme un cœur endormi. Certains explorateurs affirment qu’il murmure, qu’il montre des visions… et que derrière l’Afelium, une conscience se réveille.
+          </p>
+
+          <p>
+            En tant qu’Élu, toucher un fragment te projette dans des souvenirs d’une civilisation morte. Tu vois des cités effondrées, entends des voix,
+            perçois des Échos d’anciens esprits. Plus tu avances, plus tu comprends que les Arcanis ne sont peut-être pas morts : ils se sont
+            <strong>transférés dans l’Afelium</strong> lui-même.
+          </p>
+
+          <p>
+            Certains de ces Échos veulent renaître en utilisant les Élus comme réceptacles. Le Monolithe Noir ne dort plus. À chaque mission,
+            tu décides si tu sauves l’univers d’une seconde Grande Chute… ou si tu répètes exactement la même erreur qu’eux.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2 reveal">
+        <div class="card">
+          <h3 class="card-subtitle">Liste d’accès anticipé (maquette)</h3>
+          <p class="card-note">
+            Maquette de formulaire : côté technique, tu pourras plus tard relier ceci à un backend, une liste Mailchimp, etc.
+          </p>
+          <form class="form-early" onsubmit="event.preventDefault(); alert('Maquette uniquement pour l’instant ✨');">
+            <input
+              type="email"
+              required
+              placeholder="votre@email"
+            />
+            <button class="btn btn-primary" type="submit">Rejoindre la liste</button>
+          </form>
+          <p class="note-form">
+            Tu recevras des nouvelles d’AFELIA (dans la vraie version). Tu pourras te désinscrire à tout moment.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-subtitle">Communauté & Wishlist</h3>
+          <ul class="list-dot">
+            <li><strong>Discord</strong> — parler directement avec l’équipe, voter sur des features, proposer des idées de missions.</li>
+            <li><strong>Wishlist</strong> — quand tu ajoutes le jeu sur Steam/console, les plateformes prennent le projet plus au sérieux.</li>
+            <li><strong>Playtests</strong> — sessions fermées pour tester la mobilité, le gunfeel, les implants et l’équilibrage des factions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>AFELIA · Oreo Studios — © 2025. Tous droits réservés.</div>
+      <div class="footer-links">
+        <a href="/fr/index.html">Portfolio / Oreo Studios</a>
+        <span>·</span>
+        <span>Pré-alpha, contenu sujet à changement.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/code-animations.js" defer></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ab741bb2e945c8d',t:'MTc2NTMxMjE4OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

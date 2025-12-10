@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OreoEssentials – All-in-one Essentials Plugin · Oreo Studios</title>
+  <meta name="description" content="OreoEssentials ist ein All-in-one Essentials Plugin für Paper/Spigot 1.21+ mit Homes, Warps, Wirtschaft, Chat-Tools, Portalen, Zufallsteleport, Cross-Server-Sync mit MongoDB + RabbitMQ + Redis und mehr." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <span>Oreo Studios · OreoEssentials</span>
+      </div>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links">
+          <li><a href="/de/index.html#services">← Zurück zum Portfolio</a></li>
+          <li><a href="#overview" class="active">Überblick</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#requirements">Anforderungen</a></li>
+          <li><a href="#comparison">Vergleich</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <a href="/de/index.html#contact" class="nav-cta">
+        <span>Kontakt</span>
+      </a>
+      <button class="nav-burger" aria-label="Navigation umschalten">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview">
+      <div class="container grid-hero reveal">
+        <div>
+          <div class="badge">
+            <span>🍪 OreoEssentials</span>
+            <span>All-in-one Essentials Plugin</span>
+          </div>
+          <h1 class="hero-title">
+            Moderner <span>Essentials-Core</span> für Minecraft-Netzwerke der nächsten Generation.
+          </h1>
+          <p class="hero-tagline">
+            OreoEssentials ersetzt den klassischen "Essentials + 10 Addons"-Stack durch einen einzigen, modernen,
+            Cross-Server-fähigen Core: Homes, Warps, Spawn, RTP, Chat, Wirtschaft, Portale, Moderation und
+            Netzwerk-Tools — alles gebaut für Paper/Spigot 1.21+.
+          </p>
+          <p class="hero-desc">
+            Das Plugin ist für ernsthafte Server und Netzwerke konzipiert: asynchrone Operationen, MongoDB/PostgreSQL,
+            Redis-Cache, RabbitMQ-Bridge, SmartInvs GUIs und ein modulares Konfigurationssystem.
+            Alles ist optional, sodass kleine Server es leichtgewichtig halten können, während große Netzwerke vollständig verteilt arbeiten.
+          </p>
+
+          <div class="hero-badges">
+            <span class="hero-badge">Paper/Spigot 1.21+</span>
+            <span class="hero-badge">Java 17+</span>
+            <span class="hero-badge">Vault-kompatibel</span>
+            <span class="hero-badge">MongoDB · PostgreSQL · Redis · RabbitMQ</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="#highlights" class="btn btn-primary">
+              <span>Schlüsselmerkmale ansehen</span>
+            </a>
+            <a href="#comparison" class="btn btn-secondary">
+              <span>Vergleich mit EssentialsX / CMI</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="card" data-code-screen="oreo">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">EssentialsSyncService.java</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Der Code auf der rechten Seite wechselt durch Snippets zu Homes, Warps und Cross-Server-Teleports.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="container reveal">
+        <h2 class="section-title">Highlights</h2>
+        <p class="section-subtitle">
+          Ein schneller Überblick darüber, was OreoEssentials zusätzlich zu einem klassischen Essentials-Plugin bietet:
+          Cross-Server-Funktionen, Datenbank-Backends und Quality-of-Life-Systeme.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-subtitle">Kernfunktionen</h3>
+            <ul class="list-dot">
+              <li><strong>Homes / Warps / Spawn</strong> mit Cross-Server-Teleport-Übergabe (requestId + Warteschlangen pro Server).</li>
+              <li><strong>Zufallsteleport (/rtp)</strong> mit Rang-basiertem Radius und vollständig konfigurierbaren Einstellungen pro Rang.</li>
+              <li><strong>Chat-Tools</strong> mit Formatierung, Farbverläufen und PlaceholderAPI-Unterstützung.</li>
+              <li><strong>Portale & JumpPads</strong> für Hub / Lobby / Abenteuer-Server.</li>
+              <li><strong>Moderation</strong>: Ban, Kick, Mute, Freeze und mehr.</li>
+              <li><strong>QoL-Utilities</strong>: God/Fly/Vanish, Warps, TPA, Back, Kits und weitere klassische Essentials-Befehle.</li>
+            </ul>
+
+            <div class="badge-small">
+              SmartInvs-basierte GUIs werden für viele Systeme verwendet (Menüs, Inventare, Selektoren…).
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-subtitle">Netzwerkfunktionen & Speicherung</h3>
+            <ul class="list-dot">
+              <li><strong>Cross-Server-Wirtschaft</strong> mit Vault-Unterstützung und MongoDB/PostgreSQL/JSON-Backends.</li>
+              <li><strong>Cross-Server EnderChest</strong> mit Rang-basierter Größe, gesperrten Slots & Regeln pro Welt.</li>
+              <li><strong>Spieler-Sync</strong> (Inventar / XP / Gesundheit / Hunger) mit Toggles pro Spieler und globaler Aktivierung.</li>
+              <li><strong>RabbitMQ-Bridge</strong> für Cross-Server-Signale plus Proxy-Messaging für Serverwechsel.</li>
+              <li><strong>Redis-Cache</strong> als optionale Schicht für High-Traffic-Netzwerke (weniger DB-Druck).</li>
+              <li><strong>Asynchrone Operationen</strong> überall, wo möglich, um den Haupt-Thread sauber zu halten.</li>
+            </ul>
+
+            <div class="badge-small">
+              Entwickelt für Velocity- & BungeeCord-Netzwerke, funktioniert aber auch auf Einzelservern einwandfrei.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements">
+      <div class="container reveal">
+        <h2 class="section-title">Anforderungen</h2>
+        <p class="section-subtitle">
+          OreoEssentials ist auf moderne Java- und Server-Stacks abgestimmt. Du kannst klein anfangen und erweiterte
+          Integrationen erst aktivieren, wenn du sie brauchst.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-subtitle">Zwingend erforderlich</h3>
+            <ul class="list-dot">
+              <li><strong>Server</strong>: Paper oder Spigot <strong>1.21+</strong>.</li>
+              <li><strong>Java</strong>: <strong>17+</strong>.</li>
+            </ul>
+
+            <h3 class="card-subtitle" style="margin-top:1.2rem;">Dringend empfohlen</h3>
+            <ul class="list-dot">
+              <li><strong>Vault</strong> + ein Wirtschaftsanbieter (für Kontostand-Befehle und /pay).</li>
+              <li><strong>PlaceholderAPI</strong> für Platzhalter in Chat, GUIs und Scoreboards.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-subtitle">Optionale Integrationen (pro Funktion)</h3>
+            <ul class="list-dot">
+              <li><strong>MongoDB / PostgreSQL</strong> — Haupt-Datenspeicher-Backends.</li>
+              <li><strong>Redis</strong> — Cache für Spielerdaten, Homes, Warps, Cooldowns.</li>
+              <li><strong>RabbitMQ</strong> — Cross-Server-Sync-Kanal für Teleports, Wirtschaft & Inventar-Events.</li>
+              <li><strong>JSON / Flatfile</strong> — für kleine Server, die alles lokal halten möchten.</li>
+            </ul>
+            <div class="badge-small">
+              Du kannst OreoEssentials im „einfachen Modus“ nur mit Flatfiles ausführen und später auf DB + Cache migrieren.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparison">
+      <div class="container reveal">
+        <h2 class="section-title">Vergleich mit anderen Essentials Plugins</h2>
+        <p class="section-subtitle">
+          Eine schnelle Tabelle, um zu sehen, wo OreoEssentials im Vergleich zu EssentialsX, CMI und ZEssentials steht —
+          insbesondere in Bezug auf Datenbanken, Cross-Server-Sync und Netzwerkunterstützung.
+        </p>
+
+        <div class="card">
+          <h3 class="card-subtitle">Funktionsübersicht</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Funktion / Plugin</th>
+                  <th>OreoEssentials</th>
+                  <th>EssentialsX</th>
+                  <th>CMI</th>
+                  <th>ZEssentials</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>🧭 Homes / Warps / Spawn</td>
+                  <td>✅ Ja (Cross-Server unterstützt)</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                </tr>
+                <tr>
+                  <td>🌍 Cross-Server-Teleports</td>
+                  <td>✅ RabbitMQ + Plugin Messaging</td>
+                  <td>❌ Nein</td>
+                  <td>⚠️ Eingeschränkt (nur Bungee)</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>💾 Cross-Server-Wirtschaft</td>
+                  <td>✅ MongoDB / PostgreSQL / Redis</td>
+                  <td>❌ Nur Vault</td>
+                  <td>⚠️ Lokal oder MySQL</td>
+                  <td>⚠️ Nur Lokal</td>
+                </tr>
+                <tr>
+                  <td>🧰 Datenbank-Backends</td>
+                  <td>MongoDB, PostgreSQL, JSON, Redis Cache</td>
+                  <td>Flatfile / MySQL</td>
+                  <td>SQLite / MySQL</td>
+                  <td>Nur YAML</td>
+                </tr>
+                <tr>
+                  <td>📦 Cross-Server EnderChest</td>
+                  <td>✅ Rang-basierte Slots</td>
+                  <td>❌ Nein</td>
+                  <td>⚠️ Nur Lokal</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>🎒 Spieler-Inventar-Sync</td>
+                  <td>✅ Inventar / XP / Gesundheit / Hunger</td>
+                  <td>❌ Nein</td>
+                  <td>⚠️ MySQL-limitiert</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>🪙 Vault-Wirtschaftsunterstützung</td>
+                  <td>✅ Voll integriert</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                </tr>
+                <tr>
+                  <td>⚙️ Redis-Integration</td>
+                  <td>✅ Optionale Cache-Schicht</td>
+                  <td>❌ Nein</td>
+                  <td>❌ Nein</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>🐰 RabbitMQ-Integration</td>
+                  <td>✅ Ja (Cross-Server-Sync)</td>
+                  <td>❌ Nein</td>
+                  <td>❌ Nein</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>💬 Chat-Formatierer</td>
+                  <td>✅ Farbverlauf & PAPI-Platzhalter</td>
+                  <td>⚠️ Basic</td>
+                  <td>✅ Erweitert</td>
+                  <td>✅ Basic</td>
+                </tr>
+                <tr>
+                  <td>🗺️ Portale / JumpPads</td>
+                  <td>✅ Eingebaut</td>
+                  <td>❌ Nein</td>
+                  <td>⚠️ Mit Addon</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>🎲 Zufallsteleport (/rtp)</td>
+                  <td>✅ Rang-basiert, konfigurierbar</td>
+                  <td>⚠️ Basic Plugin</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                </tr>
+                <tr>
+                  <td>✈️ Flug / God / Vanish</td>
+                  <td>✅ Eingebaut</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                </tr>
+                <tr>
+                  <td>⚒️ Moderations-Tools</td>
+                  <td>✅ Ban / Kick / Mute / Freeze</td>
+                  <td>✅ Basic</td>
+                  <td>✅ Voll</td>
+                  <td>✅ Basic</td>
+                </tr>
+                <tr>
+                  <td>🔁 Proxy-Unterstützung</td>
+                  <td>✅ Velocity & BungeeCord</td>
+                  <td>❌ Nein</td>
+                  <td>⚠️ Nur Bungee</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>🧩 PlaceholderAPI-Unterstützung</td>
+                  <td>✅ Viele Platzhalter</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                  <td>✅ Ja</td>
+                </tr>
+                <tr>
+                  <td>🧾 Konfigurationsdateien</td>
+                  <td>YAML + JSON (modular)</td>
+                  <td>Nur YAML</td>
+                  <td>YAML</td>
+                  <td>YAML</td>
+                </tr>
+                <tr>
+                  <td>⚡ Performance</td>
+                  <td>⚡ Asynchrone Operationen + Redis Cache</td>
+                  <td>⚙️ Synchroner Datei-I/O</td>
+                  <td>⚙️ Schwer (viele Funktionen)</td>
+                  <td>🪶 Leichtgewichtig</td>
+                </tr>
+                <tr>
+                  <td>💎 Benutzerdefinierte GUI-Menüs</td>
+                  <td>✅ Basierend auf SmartInvs</td>
+                  <td>❌ Nein</td>
+                  <td>✅ Ja</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>🧑‍💻 Befehlsanzahl</td>
+                  <td>200+</td>
+                  <td>~100</td>
+                  <td>250+</td>
+                  <td>~60</td>
+                </tr>
+                <tr>
+                  <td>📡 Multi-Server-Daten-Sync</td>
+                  <td>✅ Vollautomatisch</td>
+                  <td>❌ Nein</td>
+                  <td>⚠️ Nur MySQL</td>
+                  <td>❌ Nein</td>
+                </tr>
+                <tr>
+                  <td>🧩 API / Entwickler-Hooks</td>
+                  <td>✅ JSON + Java API</td>
+                  <td>⚠️ Eingeschränkt</td>
+                  <td>✅ Umfangreich</td>
+                  <td>⚠️ Minimal</td>
+                </tr>
+                <tr>
+                  <td>💰 Preise / Lizenz</td>
+                  <td>Kostenlos (Oreo Studios)</td>
+                  <td>Kostenlos</td>
+                  <td>Bezahlt</td>
+                  <td>Kostenlos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="card-subtitle" style="margin-top:1.4rem;">TL;DR · Wann welche nutzen?</h3>
+          <ul class="list-dot">
+            <li><strong>OreoEssentials</strong> — ideal für <strong>Multi-Server-Netzwerke</strong>, die Cross-Server-Sync, moderne Datenbanken und erweiterte Tools benötigen.</li>
+            <li><strong>EssentialsX</strong> — großartig für <strong>kleine bis mittlere Einzelserver</strong>, die nur die klassischen Befehle benötigen.</li>
+            <li><strong>CMI</strong> — massiver Funktionsumfang für große Einzelserver, denen ein etwas schwereres, kostenpflichtiges Plugin nichts ausmacht.</li>
+            <li><strong>ZEssentials</strong> — leichte Option, wenn du etwas Minimales und Nur-YAML-basiertes suchst.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container reveal">
+        <h2 class="section-title">Zusammenfassung</h2>
+        <p class="section-subtitle">
+          OreoEssentials ist das einzige Essentials-artige Plugin, das speziell für moderne Netzwerke entwickelt wurde:
+          Cross-Server-Sync (MongoDB + RabbitMQ + Redis), Vault-kompatible Wirtschaft, SmartInvs GUIs
+          und alle klassischen QoL-Befehle — ohne ein Dutzend zusätzlicher Jars zu benötigen.
+        </p>
+
+        <div class="card">
+          <p class="summary-text">
+            Wenn dein Server gerade erst startet, kannst du OreoEssentials im einfachen „Flatfile + Vault“-Modus ausführen und
+            später zu MongoDB/Redis/RabbitMQ migrieren. Wenn du bereits ein verteiltes Netzwerk betreibst, kannst du es direkt
+            in deine bestehende Infrastruktur einbinden und es die Cross-Server-Daten für dich handhaben lassen.
+          </p>
+
+          <div class="btn-row">
+            <a href="/de/index.html#contact" class="btn btn-primary">
+              <span>Oreo Studios für individuelles Setup kontaktieren</span>
+            </a>
+            <a href="/de/index.html#services" class="btn btn-secondary">
+              <span>Zurück zu Projekte & Dienstleistungen</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>OreoEssentials · Oreo Studios — © 2025. Alle Rechte vorbehalten.</div>
+      <div class="footer-links">
+        <a href="/de/index.html">Portfolio</a>
+        <span>·</span>
+        <span>Kostenloses Plugin · Gebaut für moderne Minecraft-Netzwerke.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/code-animations.js" defer></script>
+</body>
+</html>

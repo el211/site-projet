@@ -1,0 +1,556 @@
+/* file: css/layout.css */
+
+/* Background layers: base gradient + dark overlay */
+.overlay,
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.overlay {
+  background: var(--bg-gradient);
+}
+
+.background-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.85),
+    rgba(15, 23, 42, 0.96)
+  );
+}
+
+/* Matrix-style Java code rain: sits above overlays, below content */
+#code-rain {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* IMPORTANT: above .overlay/.background-overlay */
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: screen;
+}
+
+/* Generic container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header / nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.96),
+    rgba(15, 23, 42, 0.9)
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.nav-bar {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo block (badge + text) */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.logo-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #f97316, #ec4899, #4f46e5);
+  box-shadow: 0 0 18px rgba(236, 72, 153, 0.7);
+}
+
+/* Navigation links (GLOBAL STYLE) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  /* Retained 1.4rem from previous fix for general long links */
+  gap: 1.4rem; 
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 0.25rem 0;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f97316, #ec4899, #4f46e5);
+  transition: width var(--transition);
+}
+
+.nav-links a:hover {
+  color: #f9fafb;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: #f9fafb;
+}
+
+/* Header CTA button */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.25);
+  background: radial-gradient(
+    circle at 30% 0,
+    rgba(248, 250, 252, 0.12),
+    rgba(15, 23, 42, 0.96)
+  );
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #f9fafb;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  border-color: rgba(248, 250, 252, 0.4);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.9);
+  background: radial-gradient(
+    circle at 20% -20%,
+    rgba(248, 250, 252, 0.22),
+    rgba(15, 23, 42, 0.96)
+  );
+}
+
+/* Burger menu (mobile) */
+.nav-burger {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    transform var(--transition);
+}
+
+.nav-burger-lines {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  position: relative;
+  transition: background var(--transition);
+}
+
+.nav-burger-lines::before,
+.nav-burger-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  transition:
+    transform var(--transition),
+    top var(--transition),
+    opacity var(--transition);
+}
+
+.nav-burger-lines::before {
+  top: -6px;
+}
+
+.nav-burger-lines::after {
+  top: 6px;
+}
+
+.nav-burger.open .nav-burger-lines {
+  background: transparent;
+}
+
+.nav-burger.open .nav-burger-lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-burger.open .nav-burger-lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Main layout */
+main {
+  padding-bottom: 4rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+/* Section titles */
+.section-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+/* Cards (panels / boxes) */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transform-style: preserve-3d;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.98);
+  border-color: rgba(248, 250, 252, 0.3);
+}
+
+/* Grid helpers */
+.grid-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
+  gap: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* Service cards (project tiles) */
+.service-card {
+  background: var(--card-soft);
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  padding: 1.5rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transform-style: preserve-3d;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.98);
+  border-color: rgba(248, 250, 252, 0.3);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle at top,
+    rgba(236, 72, 153, 0.12),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 1.8rem 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+/* Floating CTA bottom-right (portfolio page) */
+.floating-cta {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, #f97316, #ec4899, #4f46e5);
+  color: #f9fafb;
+  font-size: 0.85rem;
+  border: 1px solid rgba(248, 250, 252, 0.3);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    filter var(--transition);
+}
+
+.floating-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 1);
+  filter: brightness(1.05);
+}
+
+/* Mini-game: Bug Hunter (layout part) */
+.mini-game-card {
+  background: radial-gradient(
+    circle at top left,
+    rgba(56, 189, 248, 0.18),
+    rgba(15, 23, 42, 0.98)
+  );
+  border-radius: var(--radius);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  padding: 1.3rem 1.2rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.mini-game-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.8rem;
+}
+
+.mini-game-hud span {
+  color: var(--text-muted);
+}
+
+.mini-game-hud .value {
+  color: #e5e7eb;
+}
+
+/* small button variant used in HUD */
+.btn-sm {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.78rem;
+}
+
+/* grid of cells */
+.mini-game-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.mini-game-cell {
+  position: relative;
+  border: 0;
+  border-radius: 10px;
+  height: 40px;
+  background: radial-gradient(
+    circle at 30% 10%,
+    rgba(15, 23, 42, 1),
+    rgba(15, 23, 42, 0.9)
+  );
+  box-shadow: inset 0 0 0 1px rgba(30, 64, 175, 0.65);
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease,
+    background 0.1s ease;
+}
+
+.mini-game-cell:hover {
+  transform: translateY(-1px);
+}
+
+/* active bug cell – JS uses class "bug" */
+.mini-game-cell.bug {
+  background: radial-gradient(circle at 30% 10%, #fecaca, #b91c1c);
+  box-shadow:
+    0 0 18px rgba(248, 113, 113, 0.9),
+    inset 0 0 0 1px rgba(248, 250, 252, 0.8);
+  animation: bugPulse 0.6s ease-in-out alternate infinite;
+}
+
+.mini-game-tip {
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+@keyframes bugPulse {
+  0% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1.04);
+  }
+}
+
+/* Responsive layouts */
+@media (max-width: 900px) {
+  .grid-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main {
+    padding-top: 2.6rem;
+  }
+}
+
+@media (max-width: 720px) {
+  header {
+    position: sticky;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: var(--header-h) 0 auto 0;
+    background: rgba(15, 23, 42, 0.97);
+    backdrop-filter: blur(18px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.25rem 1.6rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.45);
+    transform: translateY(-140%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease;
+  }
+
+  body.nav-open .nav-links {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-burger {
+    display: inline-flex;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  .services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .floating-cta {
+    right: 0.8rem;
+    bottom: 0.8rem;
+  }
+
+  .mini-game-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* FIX: Increased gap for the .nav-right element to separate lang switch and CTA */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Increased space from 1rem to 2rem */
+  margin-left: auto;
+}
+
+/* NEW FIX: Language-specific override for French navigation */
+html[lang="fr"] .nav-links {
+    font-size: 0.85rem; /* Reduce font size to prevent wrapping */
+    gap: 1.2rem; /* Reduce gap slightly to accommodate smaller font */
+}

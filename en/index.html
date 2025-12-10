@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oreo Studios · Java & Minecraft Plugin Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Elias · Java & web developer, creator of OreoEssentials, ModeledNPCs and the Afelia sci-fi FPS/RPG universe." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <canvas id="code-rain"></canvas>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+<header>
+  <div class="container nav-bar">
+    <div class="logo">
+      <div class="logo-badge" aria-hidden="true"></div>
+      
+      <div class="logo-text-block">
+        <span class="logo-text-main">ELIAS SAIRE · OREO STUDIOS</span>
+        <span id="logoCode" class="logo-code visible">CEO · JAVA GAME SOFTWARE ENGINEER</span>
+      </div>
+    </div> 
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="/en/index.html#hero" class="active">Overview</a></li>
+        <li><a href="/en/index.html#services">Projects</a></li>
+        <li><a href="/en/index.html#stack">Tech</a></li>
+        <li><a href="/en/learn-java.html" class="active">Learn Java</a></li>
+        <li><a href="/en/index.html#mini-game">Mini game</a></li>
+        <li><a href="/en/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <a href="/en/index.html#contact" class="nav-cta">
+        <span>Start Your Project</span> </a>
+    </div>
+    <button class="nav-burger" aria-label="Toggle navigation">
+      <div class="nav-burger-lines"></div>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <section id="hero">
+      <div class="container grid-hero reveal">
+        <div>
+          <div class="badge">
+            <span>👋 Elias</span>
+            <span>Java · Minecraft · Web</span>
+          </div>
+          <h1 class="hero-title">
+            Building <span>developer-grade tools</span> for Minecraft & beyond.
+          </h1>
+          <p class="hero-tagline">
+            I design and ship plugins, systems and tools built like real products — tested, documented and ready
+            for production networks.
+          </p>
+          <p class="hero-desc">
+            From <strong>OreoEssentials</strong> (all-in-one Essentials core) to <strong>ModeledNPCs</strong> and the
+            sci-fi universe of <strong>AFELIA</strong>, I love mixing clean backend architecture with playful game design.
+          </p>
+
+          <div class="hero-badges">
+            <span class="hero-badge">Java 17+ · Kotlin</span>
+            <span class="hero-badge">Paper / Velocity</span>
+            <span class="hero-badge">MongoDB · PostgreSQL · Redis · RabbitMQ</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="/en/index.html#services" class="btn btn-primary">
+              <span>Explore projects</span>
+            </a>
+            <a href="/en/index.html#contact" class="btn btn-secondary">
+              <span>Let’s talk about your server</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="card" data-code-screen="default">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">/src/main/java/OreoStudios</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Live Java code preview · snippets from actual systems: async DB, records, events, cross-server sync.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container reveal">
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-subtitle">
+          A quick look at some of the systems I’ve been building — from full-stack Essentials replacements to
+          sci-fi game universes.
+        </p>
+
+        <div class="services-grid">
+          <a href="/en/oreoessentials.html" class="service-card">
+            <h3 class="service-title">OreoEssentials</h3>
+            <p class="service-subtitle">
+              All-in-one Essentials plugin with cross-server sync, MongoDB/PostgreSQL, Redis and RabbitMQ.
+            </p>
+            <ul class="service-list">
+              <li>Homes, warps, spawn, RTP, chat, economy, moderation…</li>
+              <li>Async data layer with DB + cache.</li>
+              <li>SmartInvs GUIs & modular configs.</li>
+            </ul>
+            <span class="service-tag">View project →</span>
+          </a>
+
+          <a href="/en/arcade.html" class="service-card">
+            <h3 class="service-title">Developer Arcade</h3>
+            <p class="service-subtitle">
+              A tiny JS arcade with a few games themed around debugging and Java.
+            </p>
+            <ul class="service-list">
+              <li>Canvas-based mini games.</li>
+              <li>Clean, modular JS per game.</li>
+              <li>Pixel and terminal aesthetics.</li>
+            </ul>
+            <span class="service-tag">Play in browser →</span>
+          </a>
+
+          <a href="/en/afelia.html" class="service-card">
+            <h3 class="service-title">AFELIA · Sci-fi FPS/RPG</h3>
+            <p class="service-subtitle">
+              Original sci-fi universe focused on Afelium, factions, operators and systemic combat.
+            </p>
+            <ul class="service-list">
+              <li>Full lore bible & worldbuilding.</li>
+              <li>Combat pillars & operator design.</li>
+              <li>Campaign + cooperative structure.</li>
+            </ul>
+            <span class="service-tag">Discover the universe →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="container grid-2 reveal">
+        <div>
+          <h2 class="section-title">Tech & stack</h2>
+          <p class="section-subtitle">
+            I like when servers feel like real products: monitored, scalable and maintainable. That means choosing
+            boring, proven tech — and using it well.
+          </p>
+
+          <ul class="list-dot">
+            <li><strong>Java 17+</strong>, Kotlin, Gradle/Maven, unit tests, CI.</li>
+            <li><strong>Paper, Velocity, BungeeCord</strong> · plugin ecosystems for Minecraft.</li>
+            <li><strong>MongoDB, PostgreSQL, JSON</strong> · for storage, with migration paths.</li>
+            <li><strong>Redis & RabbitMQ</strong> · cache and cross-server messaging.</li>
+            <li><strong>SmartInvs, ModelEngine, MythicMobs, WorldGuard</strong> integration.</li>
+          </ul>
+        </div>
+
+        <div class="card" data-code-screen="oreo">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">OreoEssentialsNetwork.java</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            This panel cycles through network-related snippets: records, async operations and cross-server events.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mini-game">
+      <div class="container reveal">
+        <h2 class="section-title">Mini game · Bug Hunter (Java)</h2>
+        <p class="section-subtitle">
+          Squash as many <strong>NullPointerException</strong>-style bugs as you can in 30 seconds.
+          Click the red exceptions before they disappear.
+        </p>
+
+        <div class="mini-game-card">
+          <div class="mini-game-hud">
+            <span>
+              <span>Score:</span>
+              <strong class="value" id="miniGameScore">0</strong>
+            </span>
+            <span>
+              <span>Time:</span>
+              <strong class="value" id="miniGameTime">30</strong>s
+            </span>
+            <button id="miniGameStart" class="btn btn-primary btn-sm" type="button">
+              Start game
+            </button>
+          </div>
+
+          <div id="miniGameGrid" class="mini-game-grid"></div>
+
+          <p id="miniGameStatus" class="mini-game-tip">
+            Click the <span style="color:#fecaca;">red exceptions</span> to fix them.
+            Missing too many bugs will end the game early.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container grid-2 reveal">
+        <div>
+          <h2 class="section-title">Let’s build something</h2>
+          <p class="section-subtitle">
+            Plugin from scratch, refactoring an existing setup, or designing a whole network stack — tell me what
+            you want to ship and I’ll help you scope it properly.
+          </p>
+          <ul class="list-dot">
+            <li>Custom plugins and systems (Paper / Velocity).</li>
+            <li>Cross-server essentials, player sync, bank / jobs / RPG systems.</li>
+            <li>Consulting on architecture & performance.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <p class="contact-helper">
+            Quick contact (static for now): copy/paste this in Discord or email with a short description.
+          </p>
+          <div class="contact-box">
+            <p>
+              <strong>Discord:</strong>
+              <span>@OreoStudios</span>
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <span>
+                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="512230382334343d38302211363c30383d7f323e3c">[email&#160;protected]</a>
+              </span>
+            </p>
+            <p class="contact-questions">Tell me:</p>
+            <ul class="list-dot contact-list">
+              <li>What you’re trying to build / fix.</li>
+              <li>Your server version / hosting.</li>
+              <li>Your approximate budget & timing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>Oreo Studios · Elias — © 2025. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/en/index.html#hero">Back to top</a>
+        <span>·</span>
+        <span>Built with pure HTML/CSS/JS, no frameworks.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="/en/index.html#contact" class="floating-cta">
+    <span>✨ Start a project</span>
+  </a>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/code-animations.js" defer></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ab755713c34d368',t:'MTc2NTMxMjk5Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ab759622eb7bbad',t:'MTc2NTMxMzE1Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ab760386dec995d',t:'MTc2NTMxMzQzNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oreo Studios · Java & Minecraft Plugin Desarrollador Portfolio</title>
+  <meta name="description" content="Portfolio de Elias · Desarrollador Java & Web, creador de OreoEssentials, ModeledNPCs y el universo sci-fi FPS/RPG Afelia." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+</head>
+<body>
+  <canvas id="code-rain"></canvas>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <div class="logo-text-block">
+          <span class="logo-text-main">OREO STUDIOS · ELIAS</span>
+          <span id="logoCode" class="logo-code"></span>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="/es/index.html#hero" class="active">Resumen</a></li>
+          <li><a href="/es/index.html#services">Proyectos</a></li>
+          <li><a href="/es/index.html#stack">Tecnología</a></li>
+          <li><a href="/es/index.html#mini-game">Mini-juego</a></li>
+          <li><a href="/es/index.html#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="lang-switch">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+
+        <a href="/es/index.html#contact" class="nav-cta">
+          <span>Hablemos de tu servidor</span>
+        </a>
+      </div>
+      <button class="nav-burger" aria-label="Cambiar navegación">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="container grid-hero reveal">
+        <div>
+          <div class="badge">
+            <span>👋 Elias</span>
+            <span>Java · Minecraft · Web</span>
+          </div>
+          <h1 class="hero-title">
+            Creo <span>herramientas de nivel desarrollador</span> para Minecraft y mucho más.
+          </h1>
+          <p class="hero-tagline">
+            Diseño y entrego plugins, sistemas y herramientas como productos reales: probados, documentados y listos para redes de producción.
+          </p>
+          <p class="hero-desc">
+            Desde <strong>OreoEssentials</strong> (core Essentials todo-en-uno) hasta <strong>ModeledNPCs</strong> y el universo sci-fi <strong>AFELIA</strong>, me encanta mezclar una arquitectura backend limpia con un diseño de juego divertido.
+          </p>
+
+          <div class="hero-badges">
+            <span class="hero-badge">Java 17+ · Kotlin</span>
+            <span class="hero-badge">Paper / Velocity</span>
+            <span class="hero-badge">MongoDB · PostgreSQL · Redis · RabbitMQ</span>
+          </div>
+
+          <div class="btn-row">
+            <a href="/es/index.html#services" class="btn btn-primary">
+              <span>Explorar proyectos</span>
+            </a>
+            <a href="/es/index.html#contact" class="btn btn-secondary">
+              <span>Hablemos de tu servidor</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="card" data-code-screen="default">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">/src/main/java/OreoStudios</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Live Java code preview · snippets from actual systems: async DB, records, events, cross-server sync.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container reveal">
+        <h2 class="section-title">Trabajos seleccionados</h2>
+        <p class="section-subtitle">
+          Un vistazo rápido a algunos de los sistemas que he construido: desde reemplazos completos de Essentials hasta universos sci-fi.
+        </p>
+
+        <div class="services-grid">
+          <a href="/es/oreoessentials.html" class="service-card">
+            <h3 class="service-title">OreoEssentials</h3>
+            <p class="service-subtitle">
+              Plugin Essentials todo-en-uno con sync entre servidores, MongoDB/PostgreSQL, Redis y RabbitMQ.
+            </p>
+            <ul class="service-list">
+              <li>Homes, warps, spawn, RTP, chat, economía, moderación…</li>
+              <li>Capa de datos asíncrona con base de datos + caché.</li>
+              <li>Interfaces SmartInvs y configs modulares.</li>
+            </ul>
+            <span class="service-tag">Ver proyecto →</span>
+          </a>
+
+          <a href="/es/arcade.html" class="service-card">
+            <h3 class="service-title">Developer Arcade</h3>
+            <p class="service-subtitle">
+              Un pequeño arcade en JS con algunos juegos inspirados en debugging y Java.
+            </p>
+            <ul class="service-list">
+              <li>Mini-juegos basados en Canvas.</li>
+              <li>JS limpio y modular por juego.</li>
+              <li>Estética pixel y terminal.</li>
+            </ul>
+            <span class="service-tag">Jugar en el navegador →</span>
+          </a>
+
+          <a href="/es/afelia.html" class="service-card">
+            <h3 class="service-title">AFELIA · FPS/RPG sci-fi</h3>
+            <p class="service-subtitle">
+              Universo sci-fi original centrado en el Afelium, facciones, operadores y combate sistémico.
+            </p>
+            <ul class="service-list">
+              <li>Lore completo y worldbuilding.</li>
+              <li>Pilares de combate y diseño de operadores.</li>
+              <li>Campaña + modo cooperativo.</li>
+            </ul>
+            <span class="service-tag">Descubrir el universo →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="container grid-2 reveal">
+        <div>
+          <h2 class="section-title">Tecnología & stack</h2>
+          <p class="section-subtitle">
+            Me gusta cuando un servidor se siente como un producto real: monitorizado, escalable y mantenible. Eso significa usar tecnología probada — y usarla bien.
+          </p>
+
+          <ul class="list-dot">
+            <li><strong>Java 17+</strong>, Kotlin, Gradle/Maven, tests unitarios, CI.</li>
+            <li><strong>Paper, Velocity, BungeeCord</strong> · ecosistemas de plugins para Minecraft.</li>
+            <li><strong>MongoDB, PostgreSQL, JSON</strong> · para almacenamiento, con rutas de migración.</li>
+            <li><strong>Redis & RabbitMQ</strong> · caché y mensajes entre servidores.</li>
+            <li><strong>SmartInvs, ModelEngine, MythicMobs, WorldGuard</strong> integración.</li>
+          </ul>
+        </div>
+
+        <div class="card" data-code-screen="oreo">
+          <div class="code-screen">
+            <div class="code-screen-header">
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <div class="code-screen-dot"></div>
+              <span class="code-screen-title">OreoEssentialsNetwork.java</span>
+            </div>
+            <div class="code-screen-content"></div>
+          </div>
+          <p class="code-screen-caption">
+            Este panel alterna entre fragmentos relacionados con la red: records, operaciones asíncronas y eventos entre servidores.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mini-game">
+      <div class="container reveal">
+        <h2 class="section-title">Mini-juego · Bug Hunter (Java)</h2>
+        <p class="section-subtitle">
+          Elimina tantos bugs tipo <strong>NullPointerException</strong> como puedas en 30 segundos.
+          Haz clic en las excepciones rojas antes de que desaparezcan.
+        </p>
+
+        <div class="mini-game-card">
+          <div class="mini-game-hud">
+            <span>
+              <span>Puntuación:</span>
+              <strong class="value" id="miniGameScore">0</strong>
+            </span>
+            <span>
+              <span>Tiempo:</span>
+              <strong class="value" id="miniGameTime">30</strong>s
+            </span>
+            <button id="miniGameStart" class="btn btn-primary btn-sm" type="button">
+              Iniciar juego
+            </button>
+          </div>
+
+          <div id="miniGameGrid" class="mini-game-grid"></div>
+
+          <p id="miniGameStatus" class="mini-game-tip">
+            Haz clic en las <span style="color:#fecaca;">excepciones rojas</span> para arreglarlas.
+            Si dejas pasar demasiadas, la partida terminará antes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container grid-2 reveal">
+        <div>
+          <h2 class="section-title">Construyamos algo</h2>
+          <p class="section-subtitle">
+            Plugin desde cero, refactor de una configuración existente o diseño de toda la red — cuéntame qué quieres lanzar y te ayudo a definirlo.
+          </p>
+          <ul class="list-dot">
+            <li>Plugins y sistemas a medida (Paper / Velocity).</li>
+            <li>Essentials entre servidores, sincronización de jugadores, sistemas de banco / jobs / RPG.</li>
+            <li>Asesoría en arquitectura y rendimiento.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <p class="contact-helper">
+            Contacto rápido (por ahora estático): copia y pega esto en Discord o correo con una breve descripción.
+          </p>
+          <div class="contact-box">
+            <p>
+              <strong>Discord:</strong>
+              <span>@OreoStudios</span>
+            </p>
+            <p>
+              <strong>Correo:</strong>
+              <span>
+                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="512230382334343d38302211363c30383d7f323e3c">[email&#160;protected]</a>
+              </span>
+            </p>
+            <p class="contact-questions">Cuéntame:</p>
+            <ul class="list-dot contact-list">
+              <li>Qué quieres construir / arreglar.</li>
+              <li>Versión de tu servidor / hosting.</li>
+              <li>Tu presupuesto aproximado y tiempos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>Oreo Studios · Elias — © 2025. Todos los derechos reservados.</div>
+      <div class="footer-links">
+        <a href="/es/index.html#hero">Volver arriba</a>
+        <span>·</span>
+        <span>Hecho con puro HTML/CSS/JS, sin frameworks.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="/es/index.html#contact" class="floating-cta">
+    <span>✨ Empezar un proyecto</span>
+  </a>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/code-animations.js" defer></script>
+</body>
+</html>

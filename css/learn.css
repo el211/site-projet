@@ -1,0 +1,141 @@
+/* file: css/learn.css */
+
+.terminal-card {
+    /* Base styling for the terminal container */
+    background: var(--card); 
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-soft);
+    font-family: "Space Grotesk", monospace;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.terminal-header {
+    /* Styles the top bar of the terminal (Title and Score) */
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #0d9488; /* Teal/Cyan color for terminal header */
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.terminal-output {
+    /* Area where instructions and simulation output appear */
+    min-height: 100px;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.terminal-output p {
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    /* For highlighting key words in the prompt */
+    color: #eab308; /* Yellow highlight color */
+    font-weight: bold;
+}
+
+.terminal-input-area {
+    margin-top: 1rem;
+}
+
+.terminal-prompt {
+    /* The static prompt line (e.g., 'public static void main...') */
+    display: block;
+    color: #22c55e; /* Green for the prompt line */
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.code-editor {
+    /* The textarea where the user types code */
+    width: 100%;
+    min-height: 80px; 
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--card-border);
+    color: var(--text);
+    padding: 0.5rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+    resize: vertical;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+
+.code-editor:focus {
+    outline: none;
+    border-color: #38bdf8; /* Blue on focus */
+}
+
+.terminal-actions {
+    /* Container for Run, Hint, Reset buttons */
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.terminal-feedback {
+    /* Area for displaying success/error/hint messages */
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    min-height: 20px;
+}
+
+.terminal-feedback .success {
+    color: #22c55e; /* Green for success */
+    font-weight: bold;
+}
+
+.terminal-feedback .error, .error-tip {
+    color: #f87171; /* Red for errors */
+}
+
+/* ------------------------------------- */
+/* Hint Box Styles and Animation         */
+/* ------------------------------------- */
+
+.terminal-feedback .hint {
+    /* Base style for the hint box */
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    
+    /* Base appearance for the hint */
+    background: rgba(79, 70, 229, 0.1); /* Soft purple background */
+    border: 1px solid rgba(129, 140, 248, 0.8); /* Light blue border */
+    color: #a5b4fc; /* Light purple text */
+    font-style: normal; /* Override the default 'italic' for a clean box */
+    
+    /* Initial state for the animation */
+    opacity: 0;
+    transform: scale(0.95) translateY(0);
+    transform-origin: top left;
+}
+
+/* Hint Animation (The Pop-up effect) */
+.terminal-feedback .hint-pulse {
+    /* Trigger the animation when this class is present (added by JavaScript) */
+    animation: hintPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    box-shadow: 0 0 15px rgba(129, 140, 248, 0.6); /* Soft glow */
+}
+
+@keyframes hintPopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95) translateY(0);
+        box-shadow: 0 0 5px rgba(129, 140, 248, 0.3);
+    }
+    100% {
+        /* Overshoot effect thanks to the cubic-bezier timing function */
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        box-shadow: 0 0 20px rgba(129, 140, 248, 0.8);
+    }
+}

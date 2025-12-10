@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learn Java Interactive Terminal · Oreo Studios</title>
+  <meta name="description" content="An interactive and fun way to learn Java basics using a simulated command-line environment and game-like challenges." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/learn.css" /> 
+</head>
+<body>
+  <canvas id="bg-canvas" class="overlay"></canvas>
+  <div class="background-overlay"></div>
+
+  <header>
+    <div class="container nav-bar">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <span>Oreo Studios · Learn Java</span>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/en/index.html#services">← Back to portfolio</a></li>
+          <li><a href="/en/learn-java.html" class="active">Learn Java</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+
+      <a href="/en/index.html#contact" class="nav-cta">
+        <span>Start Your Project</span>
+      </a>
+      <button class="nav-burger" aria-label="Toggle navigation">
+        <div class="nav-burger-lines"></div>
+      </button>
+    </div>
+  </header>
+
+<main>
+    <section id="learn-java">
+      <div class="container reveal">
+        <h1 class="section-title">🎓 Learn Java with the Oreo Terminal</h1>
+        <p class="section-subtitle">
+          Solve code challenges directly in the terminal simulation. Type your code and hit **[Run]** to debug your skills!
+        </p>
+
+        <div id="java-terminal" class="terminal-card">
+          <div class="terminal-header">
+            <span class="terminal-title" id="terminal-title">OreoOS > Status: Loading Lesson...</span> 
+            <div class="terminal-controls">
+              <span class="terminal-score" id="score">Score: 0 / 100</span>
+            </div>
+          </div>
+          
+          <div class="terminal-output" id="output">
+            <p>Loading interactive Java lessons...</p>
+          </div>
+          
+          <div class="terminal-input-area">
+            <span class="terminal-prompt">public static void main(String[] args) {</span>
+            <textarea id="code-input" class="code-editor" rows="2" placeholder="System.out.println(...);"></textarea>
+            <div class="terminal-actions">
+              <button id="run-btn" class="btn btn-primary btn-sm">▶ Run Code</button>
+              <button id="hint-btn" class="btn btn-secondary btn-sm">❓ Hint</button> 
+              <button id="reset-btn" class="btn btn-secondary btn-sm">↻ Reset</button>
+            </div>
+          </div>
+
+          <div id="feedback" class="terminal-feedback"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+<footer>
+    <div class="container footer-row">
+      <div>Oreo Studios · Elias — © 2025. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/en/index.html#hero">Back to top</a>
+        <span>·</span>
+        <span>Built with pure HTML/CSS/JS, no frameworks.</span>
+      </div>
+    </div>
+  </footer>
+  
+<script src="/js/i18n.js" defer></script>
+<script src="/js/main.js" defer></script>
+<script src="/js/sound.js" defer></script>
+
+<!-- 🇬🇧 Fichier de leçons EN -->
+<script src="/js/lessons/en-lessons.js" defer></script>
+
+<!-- logique commune -->
+<script src="/js/learn-java-logic.js" defer></script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ab8305f3d814d6d',t:'MTc2NTMyMTk2Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
