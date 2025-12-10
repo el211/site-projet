@@ -161,6 +161,5 @@ Je peux ensuite, selon votre choix :
 - Ajouter un fichier LICENSE (MIT par défaut),
 - Convertir les chemins absolus `/` en chemins relatifs pour une compatibilité GitHub Pages (ou fournir un script de build).
 
-Dites-moi quelle action vous voulez que je fasse ensuite.
 ```
 ```
