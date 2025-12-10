@@ -1,4 +1,3 @@
-```markdown
 # Oreo Studios — site-projet
 
 Site portfolio statique et micro-site pour "Oreo Studios · Elias" (site multilingue HTML + petit serveur Node pour tests locaux).  
