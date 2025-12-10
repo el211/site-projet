@@ -266,9 +266,9 @@ Fournir les fichiers dans un ZIP, plus leur contenu dans des blocs.
 
 ---
 
-Prompts fournis par l'auteur (CRTF) — liste complète
+Prompts 
 ----------------------------------------------------
-Ci‑dessous j'insère la liste exacte et complète des prompts CRTF que vous m'avez fournis (y compris les demandes techniques détaillées). Ils sont ajoutés ici pour traçabilité, provenance et conformité aux exigences que vous avez formulées.
+Prompts CRTF que vous m'avez fournis (y compris les demandes techniques détaillées). Ils sont ajoutés ici pour traçabilité, provenance et conformité aux exigences que vous avez formulées.
 
 (La section suivante reprend textuellement les prompts et tâches fournis par vous — si vous souhaitez qu'ils soient tronqués ou anonymisés, dites‑le.)
 
